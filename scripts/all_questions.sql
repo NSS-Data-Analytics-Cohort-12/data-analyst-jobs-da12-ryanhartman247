@@ -95,16 +95,16 @@
 --  - Disregard any postings where the domain is NULL. 
 --  - Order your results so that the domain with the greatest number of `hard to fill` jobs is at the top. 
 --   - Which three industries are in the top 4 on this list? How many jobs have been listed for more than 3 weeks for each of the top 4?
-SELECT 
-	domain AS industry,
-	COUNT(*) AS count_skill
-FROM data_analyst_jobs
-WHERE 
-	skill iLIKE '%sql%'
-	AND days_since_posting > 21
-	AND domain IS NOT NULL
-GROUP BY 1
-ORDER BY 2 desc
+-- SELECT 
+-- 	domain AS industry,
+-- 	COUNT(*) AS count_skill
+-- FROM data_analyst_jobs
+-- WHERE 
+-- 	skill iLIKE '%sql%'
+-- 	AND days_since_posting > 21
+-- 	AND domain IS NOT NULL
+-- GROUP BY 1
+-- ORDER BY 2 desc
 -- Answer: Top 3 industries 
 	-- 1. "Internet and Software" (62 jobs)
 	-- 2. "Banks and Financial Services" (61 jobs)
